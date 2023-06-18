@@ -17,6 +17,9 @@ use App\Http\Controllers\PatientController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+
 Route::get('/patients', [PatientController::class, 'index'])->name('patients.index');
 Route::get('/patients/create', [PatientController::class, 'create'])->name('patients.create');
 Route::post('/patients', [PatientController::class, 'store'])->name('patients.store');
